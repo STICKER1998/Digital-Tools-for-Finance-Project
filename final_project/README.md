@@ -1,7 +1,7 @@
 Final_Project
 ==============================
 
-This is the final Project for SFF
+This is the final Project for DTFF
 
 Project Organization
 ------------
