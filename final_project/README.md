@@ -3,6 +3,8 @@ Final_Project
 
 This is the final Project for DTFF
 
+## Warning for Teammates: Please read the [instruction](./Instruction.md) for DTFF Project.
+
 Project Organization
 ------------
 
