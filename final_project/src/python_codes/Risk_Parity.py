@@ -158,7 +158,7 @@ def Risk_Parity_Model(r, method, month_index):
     frequent = 19
     w = np.ones([3, frequent])
     for i in range(frequent):
-        print(i)
+        print("Process:",int((i+1)*100/19),"%")
         temp = Calculate_Weight(r[:, month_index[i * 3]:month_index[(i + 1) * 3]], method)
         for j in range(3):
             w[j, i] = temp[j]
@@ -197,13 +197,14 @@ def Write_Data(w_std,w_VaR,w_ES,values_std,values_VaR,values_ES,date,month_index
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     [r, date, month_index] = Read_Data()
-    print("Model based on std")
+    print("Model based on std Start:")
     [w_std, values_std,w1] = Risk_Parity_Model(r, 'std', month_index)
-    print("Model based on VaR")
+    print("Model based on VaR Start:")
     [w_VaR,values_VaR,w2]=Risk_Parity_Model(r,'VaR',month_index)
-    print("Model based on ES")
+    print("Model based on ES Start:")
     [w_ES,values_ES,w3]=Risk_Parity_Model(r,'ES',month_index)
     Write_Data(w_std, w_VaR, w_ES, values_std, values_VaR, values_ES, date, month_index)
+    print("All Finished!")
 
 
 
